@@ -7,8 +7,11 @@ describe('fe-challenge App', function() {
     page = new FeChallengePage();
   });
 
-  it('should display message saying app works', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
-  });
+  // it('should display message saying app works', () => {
+  //   page.navigateTo();
+  //   expect(page.getParagraphText()).toEqual('app works!');
+  // });
+
+  
+
 });

@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { EqualValidator } from './equal-validator.directive';
+import { EqualValidatorDirective } from './equal-validator.directive';
 
 describe('Directive: EqualValidator', () => {
   it('should create an instance', () => {

@@ -6,7 +6,7 @@
     [(ngModel)]="user.email" name="email"
     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,10}$"
     #email="ngModel">
-    <small class="error" [hidden]="email.valid || (email.pristine && !f.submitted)">
+    <small class="error email" [hidden]="email.valid || (email.pristine && !f.submitted)">
         Email is required and format should be <i>john@doe.com</i>.
     </small>
   </div>
@@ -19,7 +19,7 @@
     reverse="true"
     [(ngModel)]="user.password" name="password"
     #password="ngModel">
-    <small class="error" [hidden]="password.valid || (password.pristine && !f.submitted)">
+    <small class="error password" [hidden]="password.valid || (password.pristine && !f.submitted)">
         Password is required and must be at least 8 characters long
     </small>
   </div>
@@ -32,7 +32,7 @@
     reverse="false"
     [(ngModel)]="user.confirmPass" name="confirmPass"
     #confirmPass="ngModel">
-    <small class="error" [hidden]="confirmPass.valid ||  (confirmPass.pristine && !f.submitted)">
+    <small class="error confirmPass" [hidden]="confirmPass.valid ||  (confirmPass.pristine && !f.submitted)">
         Password mismatch
     </small>
   </div>

@@ -1,3 +1,4 @@
+/* tslint:disable */
 import {Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChange, ElementRef} from '@angular/core';
 import {IMyDate, IMyMonth, IMyWeek, IMyDayLabels, IMyMonthLabels, IMyLocales, IMyOptions} from './interfaces/index';
 

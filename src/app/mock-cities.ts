@@ -1,3 +1,4 @@
+/* tslint:disable */
 import { City } from './city';
 
 export const CITIES: City[] = [
