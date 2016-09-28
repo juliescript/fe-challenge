@@ -4,29 +4,40 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 
+import { DatepickerModule } from 'ng2-bootstrap';
+
 import { AppComponent } from './app.component';
 import { DataTableComponent } from './data-table/data-table.component';
-import { appRoutingProviders, routing } from './app.routes';
+import { routing } from './app.routes';
 
 import { CityService } from './city.service';
 import { SortByPipe } from './shared/pipes/sort-by.pipe';
+
+import * as _ from 'lodash';
+import { FormValidationComponent } from './form-validation/form-validation.component';
+import { DateFilterPipe } from './shared/pipes/date-filter.pipe';
+import { EqualValidatorDirective } from './shared/directives/equal-validator.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataTableComponent,
     SortByPipe,
+    FormValidationComponent,
+    DateFilterPipe,
+    EqualValidatorDirective,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    DatepickerModule
   ],
   exports: [
     SortByPipe,
   ],
-  providers: [appRoutingProviders, CityService],
+  providers: [CityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

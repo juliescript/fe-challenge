@@ -1,22 +1,22 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import {Pipe, PipeTransform} from '@angular/core';
+import * as _ from 'lodash';
 
-@Pipe({
-  name: 'sortBy'
-})
+@Pipe({name: 'sortBy', pure: false})
 export class SortByPipe implements PipeTransform {
 
-  transform(array: Array<any>, orderField: string, orderType: boolean): Array<string> {
-    array.sort((a: any, b: any) => {
-        if (a[orderField] == null || a[orderField].isUndefined) {
-            return orderType ? 0 - b[orderField] : b[orderField] - 0;
-        }
-        if (b[orderField] == null || b[orderField].isUndefined) {
-          return orderType ? a[orderField] - 0 : b[orderField] - 0;
-        }
-        return orderType ? a[orderField] - b[orderField] : b[orderField] - a[orderField];
-    });
-    console.log(array);
-    return array;
-  }
 
+    transform(input: Object[], field: string, desc: boolean = false): Object[] {
+        if (input && field) {
+        return Array.from(input).sort((a: Object, b: Object) => {
+            if (_.get(a, field) < _.get(b, field)) {
+            return desc ? 1 : -1;
+            }
+            if (_.get(a, field) > _.get(b, field)) {
+            return desc ? -1 : 1;
+            }
+            return 0;
+        });
+        }
+        return input;
+    }
 }

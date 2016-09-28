@@ -1,0 +1,24 @@
+<div class="table">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th (click)="sortBy('city')" >City</th>
+        <th (click)="sortBy('start_date')">Start Date</th>
+        <th (click)="sortBy('end_date')">End Date</th>
+        <th (click)="sortBy('price')">Price</th>
+        <th (click)="sortBy('status')">Status</th>
+        <th (click)="sortBy('color')">Color</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let city of cities | sortBy: field">
+        <td>{{ city.city }}</td>
+        <td>{{ city.start_date | date: 'shortDate' }}</td>
+        <td>{{ city.end_date | date: 'shortDate' }}</td>
+        <td>{{ city.price }}</td>
+        <td>{{ city.status }}</td>
+        <td>{{ city.color }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
