@@ -1,3 +1,11 @@
+<div class="form-group">
+  <form (ngSubmit)="filterByDate()" #filterDate="ngForm">
+    <app-my-date-picker [selDate]="startDate.formatted" (dateChanged)="filterStartDate($event)" ></app-my-date-picker>
+    <app-my-date-picker [selDate]="endDate.formatted" (dateChanged)="filterEndDate($event)" ></app-my-date-picker>
+    <button type="submit">Filter by date</button>
+  </form>
+</div>
+
 <div class="table">
   <table class="table table-striped">
     <thead>

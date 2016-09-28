@@ -14,8 +14,10 @@ import { CityService } from './city.service';
 import { SortByPipe } from './shared/pipes/sort-by.pipe';
 
 import * as _ from 'lodash';
+
+import { MyDatePickerComponent } from './shared/my-date-picker/my-date-picker.component';
+
 import { FormValidationComponent } from './form-validation/form-validation.component';
-import { DateFilterPipe } from './shared/pipes/date-filter.pipe';
 import { EqualValidatorDirective } from './shared/directives/equal-validator.directive';
 
 @NgModule({
@@ -24,8 +26,8 @@ import { EqualValidatorDirective } from './shared/directives/equal-validator.dir
     DataTableComponent,
     SortByPipe,
     FormValidationComponent,
-    DateFilterPipe,
     EqualValidatorDirective,
+    MyDatePickerComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +38,7 @@ import { EqualValidatorDirective } from './shared/directives/equal-validator.dir
   ],
   exports: [
     SortByPipe,
+    MyDatePickerComponent
   ],
   providers: [CityService],
   bootstrap: [AppComponent]
