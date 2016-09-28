@@ -2,7 +2,7 @@
 
 #ET FE Test
 
-To do this project I used [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15 in order to accelerate the development time.
+To do this project I used [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15 in order to accelerate the development process.
 
 ## Install the project
 
